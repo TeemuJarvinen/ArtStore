@@ -1,0 +1,385 @@
+:root {
+  --primary: #faf1e6;
+  --color-bg: #e4efe7;
+  --color-dark: #14442a;
+  --color-grey: #76a984;
+  --light: #fdfaf6;
+  --shadow: 0 7px 10px rgba(104, 104, 104, 0.8);
+  --button-shadow: 0px 1px 8px #081a31;
+}
+
+*,
+*::after,
+*:hover {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Times New Roman", Times, serif, Times, serif;
+}
+
+body {
+  background: var(--color-bg);
+  margin: 20px 40px;
+  line-height: 1.4;
+}
+
+img {
+  max-width: 100%;
+}
+
+.btn {
+  background: var(--color-dark);
+  color: var(--light);
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+  display: block;
+  border-radius: 5px;
+}
+.btn:hover {
+  box-shadow: var(--button-shadow);
+}
+
+.wrapper {
+  display: grid;
+  gap: 1rem;
+}
+
+/* -----------------------------  Navigation ----------------------- */
+
+.main-nav ul {
+  display: grid;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.main-nav a {
+  background: var(--primary);
+  display: block;
+  text-decoration: none;
+  padding: 0.8rem;
+  text-align: center;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow);
+}
+.main-nav a:hover {
+  background: var(--color-dark);
+  color: var(--light);
+}
+
+#nav-artworks {
+  background: rgb(222, 184, 247);
+  background: linear-gradient(
+    90deg,
+    rgba(222, 184, 247, 1) 0%,
+    rgba(255, 186, 186, 1) 50%,
+    rgba(255, 217, 163, 1) 100%
+  );
+}
+
+#nav-artworks:hover {
+  background: rgb(176, 110, 219);
+  background: linear-gradient(
+    90deg,
+    rgba(176, 110, 219, 1) 0%,
+    rgba(241, 98, 98, 1) 50%,
+    rgba(255, 184, 81, 1) 100%
+  );
+}
+
+/* --------------------------------  Header ----------------------------------- */
+.header {
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "header-main header-main header-box-a"
+    "header-main header-main header-box-b";
+}
+
+.header-box-a {
+  grid-area: header-box-a;
+
+  background-image: linear-gradient(
+      rgb(178 255 183 / 52%),
+      rgb(255 255 255 / 73%)
+    ),
+    url(Images/Event1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-box-b {
+  grid-area: header-box-b;
+
+  background-image: linear-gradient(
+      rgb(214 255 217 / 52%),
+      rgb(255 255 255 / 73%)
+    ),
+    url(Images/Event2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-box {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  box-shadow: var(--shadow);
+  padding: 0.5rem;
+}
+
+.header-box-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px 1.3rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.header-box-text p {
+  margin-bottom: 1.3rem;
+}
+
+.header-main {
+  grid-area: header-main;
+
+  background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(30, 0, 0, 1) 100%
+    ),
+    url(Images/Hero.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.header-main h1 {
+  font-size: 4rem;
+  color: var(--light);
+}
+.header-main p {
+  font-size: 1.5rem;
+  margin-top: 0;
+  color: var(--light);
+}
+
+.header-main a {
+  font-size: 1.4rem;
+}
+
+/* ----------------------------------------- Mini artisti highlight ------------------------- */
+
+.mini-artistHighlight {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+}
+
+.mini-artistHighlight h3 {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.mini-artistHighlight-box {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  background: var(--primary);
+  text-align: center;
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+  border-radius: 25px;
+}
+
+.mini-artistHighlight-box h3 {
+  font-style: italic;
+}
+
+.mini-artistHighlight-box img {
+  border-radius: 25px;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* ----------------------------------------- Artist highlight ------------------------- */
+
+.artistHighlight {
+  background: var(--primary);
+  box-shadow: var(--shadow);
+
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+.artistHighlight img {
+  width: 23rem;
+  height: auto;
+}
+
+.artistHighlight h3 {
+  color: var(--color-grey);
+}
+
+.artistHighlight a {
+  margin-top: 5rem;
+}
+
+.artistHighlightBtn {
+  display: inline;
+}
+
+.mini-artworks {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* ----------------------------------------- Mini artworks ------------------------- */
+
+.mini-artworks img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 1100px) {
+  .artistHighlight {
+    flex-direction: column;
+  }
+
+  .artistHighlight .btn {
+    display: block;
+    text-align: center;
+  }
+  .artistHighlight img {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .artistHighlight div h1 {
+    font-size: 1.5rem;
+  }
+  .artistHighlight div h2 {
+    font-size: 1.4rem;
+  }
+  .artistHighlight div h3 {
+    font-size: 1.3rem;
+  }
+  .artistHighlight div p {
+    font-size: 1.2rem;
+  }
+  .artistHighlight div .btn {
+    font-size: 1.2rem;
+  }
+
+  .mini-artistHighlight {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .mini-artistHighlight-box .btn {
+    font-size: 1.2rem;
+  }
+  .mini-artistHighlight h3 {
+    font-size: 1.2rem;
+  }
+  .header-box-text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .header {
+    grid-template-areas:
+      "header-main header-main"
+      "header-box-a header-box-b";
+  }
+
+  .header-main h1 {
+    font-size: 2.5rem;
+  }
+
+  .header-main p {
+    font-size: 1.2rem;
+  }
+  .header-main a {
+    font-size: 0.9rem;
+  }
+
+  .main-nav ul {
+    grid-template-columns: 1fr;
+  }
+
+  .header-box-text {
+    font-size: 1rem;
+  }
+
+  .mini-artistHighlight {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    grid-template-areas:
+      "header-main"
+      "header-box-a"
+      "header-box-b";
+  }
+
+  .header-main h1 {
+    font-size: 2rem;
+  }
+
+  .header-main p {
+    font-size: 1rem;
+  }
+  .header-main a {
+    font-size: 0.8rem;
+  }
+
+  .artistHighlight div h1 {
+    font-size: 1.3rem;
+  }
+  .artistHighlight div h2 {
+    font-size: 1.2rem;
+  }
+  .artistHighlight div h3 {
+    font-size: 1.1rem;
+  }
+  .artistHighlight div p {
+    font-size: 1rem;
+  }
+  .artistHighlight div .btn {
+    font-size: 1rem;
+  }
+
+  .mini-artistHighlight {
+    grid-template-columns: 1fr;
+  }
+  .mini-artistHighlight h3 {
+    font-size: 1rem;
+  }
+  .mini-artistHighlight h2 {
+    font-size: 1.2rem;
+  }
+}
